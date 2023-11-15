@@ -4,11 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './home/home.component';
-import { VisualizarFuncionarioComponent } from './visualizar-funcionario/visualizar-funcionario.component';
-import { IncluirFuncionarioComponent } from './incluir-funcionario/incluir-funcionario.component';
-import { EditarFuncinarioComponent } from './editar-funcinario/editar-funcinario.component';
-import { ListarFuncionariosComponent } from './listar-funcionario/listar-funcionarios.component';
+import { ListaFuncionariosComponent } from './lista-funcionarios/lista-funcionarios/lista-funcionarios.component';
+import { EditarFuncionarioComponent } from './editar-funcionario/editar-funcionario/editar-funcionario.component';
+import { VisualizarFuncionarioComponent } from './visualizar-funcionario/visualizar-funcionario/visualizar-funcionario.component';
+import { IncluirFuncionarioComponent } from './incluir-funcionario/incluir-funcionario/incluir-funcionario.component';
+import { PrincipalComponent } from './principal/principal.component';
 
 @NgModule({
   declarations: [
@@ -16,8 +16,7 @@ import { ListarFuncionariosComponent } from './listar-funcionario/listar-funcion
     HomeComponent,
     VisualizarFuncionarioComponent,
     IncluirFuncionarioComponent,
-    EditarFuncinarioComponent,
-    ListarFuncionariosComponent
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,
