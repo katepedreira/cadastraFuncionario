@@ -9,6 +9,7 @@ import { ListaFuncionariosComponent } from './lista-funcionarios/lista-funcionar
 import { EditarFuncionarioComponent } from './editar-funcionario/editar-funcionario/editar-funcionario.component';
 import { VisualizarFuncionarioComponent } from './visualizar-funcionario/visualizar-funcionario/visualizar-funcionario.component';
 import { IncluirFuncionarioComponent } from './incluir-funcionario/incluir-funcionario/incluir-funcionario.component';
+import { PrincipalComponent } from './principal/principal.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { IncluirFuncionarioComponent } from './incluir-funcionario/incluir-funci
     ListaFuncionariosComponent,
     EditarFuncionarioComponent,
     VisualizarFuncionarioComponent,
-    IncluirFuncionarioComponent
+    IncluirFuncionarioComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,
