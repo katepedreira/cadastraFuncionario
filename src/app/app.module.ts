@@ -9,18 +9,46 @@ import { VisualizarFuncionarioComponent } from './visualizar-funcionario/visuali
 import { IncluirFuncionarioComponent } from './incluir-funcionario/incluir-funcionario.component';
 import { EditarFuncinarioComponent } from './editar-funcinario/editar-funcinario.component';
 import { ListarFuncionariosComponent } from './listar-funcionario/listar-funcionarios.component';
+import { CadastrarFuncionarioComponent } from './cadastrar-funcionario/cadastrar-funcionario.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import {MatInputModule } from '@angular/material/input';
+import {FormsModule } from '@angular/forms';
+import {MatSortModule } from '@angular/material/sort';
+import { MatSelectModule } from '@angular/material/select';
+import {HttpClientModule } from '@angular/common/http';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule } from '@angular/material/icon';
+import {MatTableModule } from '@angular/material/table';
+import {MatPaginatorModule } from '@angular/material/paginator';
+import {MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     VisualizarFuncionarioComponent,
-    IncluirFuncionarioComponent
+    IncluirFuncionarioComponent,
+    CadastrarFuncionarioComponent,
+    ListarFuncionariosComponent,
+    EditarFuncinarioComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule, 
+    MatMenuModule,
+    MatIconModule,
+    MatTableModule, 
+    MatPaginatorModule,
+    MatFormFieldModule,
+    HttpClientModule,
+    MatInputModule,
+    FormsModule,
+    MatSelectModule,
+    MatSortModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

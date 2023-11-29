@@ -1,0 +1,62 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(#4169E1, #6495ED)
+  }
+  
+  .container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    max-width: 60%;
+    margin-bottom: 1.5rem;
+    border-radius: 50%; /* Adiciona a borda redonda */
+    overflow: hidden; /* Garante que a borda redonda seja aplicada corretamente */
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff; 
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff; 
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3; /* ou qualquer outra cor que você preferir ao passar o mouse */
+    color: #fff;
+  }
+
+  
+  

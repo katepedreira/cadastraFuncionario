@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: black; /* Cor de fundo do cabeçalho */
+    color: #ffffff; /* Cor do texto */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.navbar-brand {
+    text-decoration: none;
+    font-size: 24px;
+    color: #ffffff; /* Cor do texto da marca */
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    transition: color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.nav-link:hover {
+    color: #e74c3c; /* Cor ao passar o mouse sobre o link */
+}
