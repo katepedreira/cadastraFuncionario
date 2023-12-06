@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <br>
   <h2 class="text-center">Editar Funcionário</h2>
 
@@ -41,7 +41,7 @@
 <div class="form-group">
   <label for="select-cargo">Cargo</label>
   <select class="form-control" id="select-cargo" formControlName="cargo">
-    <!-- <option value="">Selecione o cargo:</option> -->
+
     <option *ngFor="let cargo of cargos" [value]="cargo.idCargo">
       {{ cargo.cargo }}
     </option>
@@ -62,5 +62,5 @@
   <button type="submit" (click)="salvarEdicao()" class="btn btn-primary">Salvar Edição</button>
 
   <hr>
-</div>
+</div> -->
 
