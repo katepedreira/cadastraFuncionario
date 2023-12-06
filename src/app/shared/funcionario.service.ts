@@ -1,3 +1,36 @@
+// import { Injectable } from '@angular/core';
+// import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+// import { Observable } from 'rxjs';
+
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class FuncionarioService {
+
+//   private url = 'https://localhost:8080/funcionario';
+
+//   constructor(private http: HttpClient) {}
+
+//   listarFuncionarios(): Observable<any> {
+//     return this.http.get(`${this.url}/list`);
+//   }
+
+//   incluirFuncionarioById(): Observable<any> {
+//     return this.http.get(`${this.url}/create`);
+//   }
+
+//   editarFuncionarioById(): Observable<any> {
+//     return this.http.get(`${this.url}/edit`);
+//   }
+
+//   removerFuncionarioById(): Observable<any> {
+//     return this.http.get(`${this.url}/remove/{id}`);
+//   }
+
+
+// }
+
+
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -7,25 +40,34 @@ import { Observable } from 'rxjs';
 })
 export class FuncionarioService {
 
-  private url = 'https://localhost:8080/funcionario';
+  private url = 'http://localhost:8080/api/funcionario';
+
+  private httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json',
+      'Authorization': 'Basic ' + btoa('kate:12345')
+    })
+  };
 
   constructor(private http: HttpClient) {}
 
-  listarFuncionarios(): Observable<any> {
-    return this.http.get(`${this.url}/list`);
+  listarFuncionarios(params?: any): Observable<any> {
+    const options = { params: new HttpParams({ fromObject: params }) };
+    return this.http.get(`${this.url}/list`, this.httpOptions);
   }
 
-  incluirFuncionarioById(): Observable<any> {
-    return this.http.get(`${this.url}/create`);
+  incluirFuncionario(funcionarioData: any): Observable<any> {
+    return this.http.post(`${this.url}/create`, funcionarioData, this.httpOptions);
   }
 
-  editarFuncionarioById(): Observable<any> {
-    return this.http.get(`${this.url}/edit`);
+  editarFuncionario(id: string, funcionarioData: any): Observable<any> {
+    return this.http.put(`${this.url}/edit/${id}`, funcionarioData, this.httpOptions);
   }
 
-  removerFuncionarioById(): Observable<any> {
-    return this.http.get(`${this.url}/remove/{id}`);
+  removerFuncionario(id: string): Observable<any> {
+    return this.http.delete(`${this.url}/remove/${id}`, this.httpOptions);
   }
+
 
 
 }

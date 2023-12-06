@@ -1,1 +1,67 @@
-<p>incluir-funcionario works!</p>
+<div class="container">
+  <br>
+  <h2 class="text-center">Incluir Funcionário</h2>
+
+  <hr>
+
+  <form [formGroup]="formInserirFuncionario">
+      <div class="form-group">
+          <label for="input-matricula">Matrícula</label>
+          <input type="text" class="form-control" id="input-matricula" placeholder="Matrícula" maxlength="8" formControlName="matricula">
+      </div>
+
+      <div class="form-group">
+          <label for="input-nome">Nome</label>
+          <input type="text" class="form-control" id="input-nome" placeholder="Nome" formControlName="nome">
+      </div>
+
+      <div class="form-group">
+          <label for="select-sexo">Gênero</label>
+          <select class="form-control" id="select-sexo" formControlName="sexo">
+              <option value="">Selecione o gênero:</option>
+              <option value="masculino">Masculino</option>
+              <option value="feminino">Feminino</option>
+              <option value="outro">Outro</option>
+          </select>
+      </div>
+      <div class="form-group">
+        <label for="input-nascimento">Data de Nascimento</label>
+        <input type="date" class="form-control" id="input-nascimento" placeholder="Data de Nascimento" formControlName="nascimento">
+      </div>
+      <div class="form-group">
+        <label for="input-cpf">CPF</label>
+        <input type="text" class="form-control" id="input-cpf" placeholder="CPF" maxlength="14" formControlName="cpf">
+    </div>
+    <div class="form-group">
+      <label for="select-departamento">Departamento</label>
+      <select class="form-control" id="select-departamento" formControlName="departamento" (change)="departamentoChange($event)">
+          <option *ngFor="let departamento of departamentos" [value]="departamento.idDepto"> {{departamento.nome}}</option>
+      </select>
+  </div>
+  <div class="form-group">
+    <label for="select-cargo">Cargo</label>
+    <select class="form-control" id="select-cargo" formControlName="cargo">
+      <!-- <option value="">Selecione o cargo:</option> -->
+      <option *ngFor="let cargo of cargos" [value]="cargo.idCargo">
+        {{ cargo.cargo }}
+      </option>
+    </select>
+
+  </div>
+
+  <div class="form-group">
+    <label for="input-nascimento">Salário</label>
+    <input type="number" class="form-control" id="input-salario" placeholder="Salário" formControlName="salario">
+  </div>
+
+
+      <hr>
+
+      <a class="btn btn-secondary" routerLink="/index" role="button">Voltar</a>
+      <button type="submit" (click)="salvarFuncionario()" class="btn btn-primary">Salvar</button>
+
+
+      <hr>
+  </form>
+</div>
+
