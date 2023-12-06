@@ -18,10 +18,16 @@ import { MatSelectModule } from '@angular/material/select';
 import {HttpClientModule } from '@angular/common/http';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule } from '@angular/material/icon';
-import {MatTableModule } from '@angular/material/table';
-import {MatPaginatorModule } from '@angular/material/paginator';
-import {MatFormFieldModule } from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {NavbarComponent} from './navbar/navbar.component';
+import {NgModule} from '@angular/core';
+import {VisualizarFuncionarioComponent} from './visualizar-funcionario/visualizar-funcionario.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
+
 
 @NgModule({
   declarations: [

@@ -1,0 +1,46 @@
+<body>
+
+  <div class="search">
+    <mat-form-field>
+      <mat-label>Search</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Ana" #input>
+    </mat-form-field>
+  </div>
+
+  <div class="custom-table-container">
+    <table mat-table [dataSource]="dataSource" matSort class="custom-table">
+
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="blue-header"> Nome </th>
+        <td mat-cell *matCellDef="let row" class="blue-cell"> {{row.nome}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="matricula">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="blue-header"> Matrícula </th>
+        <td mat-cell *matCellDef="let row" class="blue-cell"> {{row.matricula}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="acoes">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="blue-header"> Ações </th>
+        <td mat-cell *matCellDef="let row" class="blue-cell">
+          <i class="bi bi-trash-fill" (click)="removerFuncionario(row)">
+            &nbsp;
+          </i>
+          <i class="bi bi-pencil-fill" (click)="editarFuncionario(row)">
+          </i>
+          &nbsp;
+          <i class="bi bi-eye-fill" (click)="removerFuncionario(row)">
+          </i>
+        </td>
+      </ng-container>
+      
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+
+  <div class="paginator-container">
+    <mat-paginator [pageSizeOptions]="[10, 20, 40, 50]" [pageSize]="pageSize" showFirstLastButtons></mat-paginator>
+  </div>
+</body>
