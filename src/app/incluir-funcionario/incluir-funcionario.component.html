@@ -30,18 +30,19 @@
       </div>
       <div class="form-group">
         <label for="input-cpf">CPF</label>
-        <input type="text" class="form-control" id="input-cpf" placeholder="CPF" maxlength="14" formControlName="cpf">
+        <input type="text" class="form-control" id="input-cpf" placeholder="CPF" maxlength="11" formControlName="cpf">
     </div>
     <div class="form-group">
       <label for="select-departamento">Departamento</label>
       <select class="form-control" id="select-departamento" formControlName="departamento" (change)="departamentoChange($event)">
+        <option value="">Selecione o departamento:</option>
           <option *ngFor="let departamento of departamentos" [value]="departamento.idDepto"> {{departamento.nome}}</option>
       </select>
   </div>
   <div class="form-group">
     <label for="select-cargo">Cargo</label>
     <select class="form-control" id="select-cargo" formControlName="cargo">
-      <!-- <option value="">Selecione o cargo:</option> -->
+      <option value="">Selecione o cargo:</option>
       <option *ngFor="let cargo of cargos" [value]="cargo.idCargo">
         {{ cargo.cargo }}
       </option>

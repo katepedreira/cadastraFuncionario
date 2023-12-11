@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditarFuncionarioComponent } from './editar-funcinario.component';
+import { EditarFuncinarioComponent } from './editar-funcinario.component';
 
 describe('EditarFuncinarioComponent', () => {
-  let component: EditarFuncionarioComponent;
-  let fixture: ComponentFixture<EditarFuncionarioComponent>;
+  let component: EditarFuncinarioComponent;
+  let fixture: ComponentFixture<EditarFuncinarioComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [EditarFuncionarioComponent]
+      declarations: [EditarFuncinarioComponent]
     });
-    fixture = TestBed.createComponent(EditarFuncionarioComponent);
+    fixture = TestBed.createComponent(EditarFuncinarioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

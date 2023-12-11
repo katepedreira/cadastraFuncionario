@@ -11,6 +11,7 @@ const routes: Routes = [
   {path: "incluir-funcionario", component: IncluirFuncionarioComponent},
   {path: "editar-funcionario", component: EditarFuncinarioComponent},
   {path: "listar-funcionarios", component: ListarFuncionariosComponent},
+  {path: 'editar-funcionario/:id', component: EditarFuncinarioComponent },
 ];
 
 @NgModule({

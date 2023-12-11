@@ -22,6 +22,8 @@ import {NavbarComponent} from './navbar/navbar.component';
 import {NgModule} from '@angular/core';
 import {VisualizarFuncionarioComponent} from './visualizar-funcionario/visualizar-funcionario.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { DatePipe } from '@angular/common';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
@@ -53,9 +55,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatSortModule,
     MatDialogModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
